@@ -60,15 +60,16 @@ body {
     color: $white;
     font-size: 18px;
 
+
     @media (max-width: $sm) {
       h1 { 
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
       h2 {
-        font-size: 1rem
+        font-size: 1.5rem
       }
       h3 {
-        font-size: .8rem;
+        font-size: 1rem;
       }
       h4 {
         font-size: .7rem;
@@ -104,6 +105,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
+    text-align: center;
 }
 
 ul {
@@ -125,7 +127,7 @@ ul {
 
 .frame {
   width: 100%;
-  height: 97%;
+  height: 100%;
   position: relative;
   transition: all 250ms;
 }
@@ -144,6 +146,28 @@ ul {
     width: 90%;
   }
 
+  .shade-active {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($black, .5);
+    z-index: 4;
+  }
+
+  h1 {
+    @extend .robo-mono;
+  }
+
+  hr {
+    width: 45px;
+    margin: 30px auto;
+  }
+
+  h3 {
+    font-weight: 100;
+  }
 /*
 |--------------------------------------------------------------
 | 4. Navigation 
@@ -158,6 +182,9 @@ ul {
   left: -200px;
   transition: all 250ms;
   z-index: 5;
+
+  
+
   .sliding-navbar-toggle {
       left: 200px;
       position: absolute;
@@ -305,18 +332,125 @@ ul {
 
 .projects {
   background-color: $purp;
-  height: 900px;
+  height: auto;
+  padding-top: 80px;
+  text-align: center;
 
-  h1 {
-    @extend .robo-mono;
+  .content {
+    width: 100%;
   }
 
-  hr {
-    width: 45px;
-    margin: 30px auto;
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
   }
+}
 
-  h3 {
-    font-weight: 100;
+/*
+|---------------------------------------
+| 6a. Projects Thumbnails 
+|---------------------------------------
+*/
+
+.thumb-wrapper {
+  margin-top: 30px;
+  .thumb-container {
+    position: relative;
+    float: left;
+    width: 25%;
+    max-height: 225px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+
+    @media(max-width: $md) {
+      width: 33.333%;
+    }
+    
+    @media(max-width: $sm) {
+      width: 50%;
+    }
+
+    @media(max-width: $xs) {
+      width: 100%;
+    }
+
+
+    img {
+      height: 100%;
+      display: block;
+      position: relative;
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .mask-container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba($lightgray, .8);
+      opacity: 0;
+    }
+
+    .mask-content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      hr {
+        width: 30px;
+        border-top: 1px solid $black;
+        margin: 15px auto;
+        position: relative;
+        z-index: 3;
+      }
+      
+      h4 {
+        font-weight: 100;
+        color: $black;
+        position: relative;
+        z-index: 3;
+      }
+      
+      h3 {
+        display: block;
+      }
+
+      a {
+        display: block;
+        color: $black;
+        @extend .robo-mono;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 5;
+      }
+    }
+  
+    &:hover {
+      .thumb {
+        transform: scale(1.1);
+      }
+
+      .mask-container {
+        top: 0;
+        left: 0;
+        opacity: 1;
+      }
+    }
   }
+}
+
+/*
+|--------------------------------------------------------------
+| 7. About 
+|--------------------------------------------------------------
+*/
+
+.about {
+  background-color: $red;
 }
