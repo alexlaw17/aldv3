@@ -1,6 +1,12 @@
 $(function() {
+    //Loading Screen
     $(window).load(function() {
-        $("#loader").delay(3000).fadeOut('slow');
+        $("#loader").delay(1500).fadeOut('500', function() {
+            $('.wrapper').removeClass('overflow');
+            $('.intro .content').fadeIn(800, function(){
+            	$('.arrow-down').animate({opacity: 1},500);
+            });
+        });
     });
 
     //Smooth Scroll
@@ -22,15 +28,15 @@ $(function() {
     smoothScroll();
 
     //Navigation Bar Toggle
-    var toggle = $('.sliding-navbar-toggle');
-    var main = $('.sliding-navbar-main');
+    function toggle() {
+        var toggle = $('.sliding-navbar-toggle');
+        var main = $('.sliding-navbar-main');
 
-    toggle.click(function() {
-        main.toggleClass('sliding-navbar-active');
-        $('.frame').toggleClass('frame-active');
-        $('.hamburger').toggleClass('active');
-    });
-
-    // WoW JS http://mynameismatthieu.com/WOW/docs.html
-    // WOW().init();
+        toggle.click(function() {
+            main.toggleClass('sliding-navbar-active');
+            // $('.frame').toggleClass('frame-active');
+            $('.hamburger').toggleClass('active');
+        });
+    }
+    toggle();
 });
