@@ -9,6 +9,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/slick.js/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/slick.js/slick/slick-theme.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css styles/main.css -->
@@ -24,6 +26,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div class="wrapper overflow">
+        <!-- L O A D E R -->
         <div id="loader" class="preload-screen">
             <div class="preload-content">
                 <div id="preload">
@@ -54,7 +57,7 @@
             </div>
         </div>
         <!-- I N T R O D U C T I O N -->
-        <div id="intro" class="frame intro" data-anchor="intro">
+        <div id="intro" class="frame intro">
             <div class="container">
                 <img class="intro-pf" src="images/pf-head.svg" alt="">
                 <div class="content">
@@ -66,107 +69,105 @@
             </div>
         </div>
         <!-- P R O J E C T S -->
-        <div id="projects" name="projects" class="frame projects" data-anchor="projects">
+        <div id="projects" name="projects" class="frame projects">
             <div class="container-fluid">
-                <div>
-                    <h1>Projects</h1>
-                    <hr>
-                    <h3>Projects I have worked on</h3>
-                    <div class="thumb-wrapper">
-                        <div class="thumb-container">
-                            <img class="thumb" src="images/backgrounds/bbw.jpg" alt="">
-                            <div class="mask-container">
-                                <div class="mask-content">
-                                    <h3><a href="#">Sample</a></h3>
-                                </div>
+                <h1>Projects</h1>
+                <hr>
+                <h3>Projects I have worked on</h3>
+                <div class="thumb-wrapper">
+                    <div class="thumb-container">
+                        <img class="thumb" src="images/backgrounds/bbw.jpg" alt="">
+                        <div class="mask-container">
+                            <div class="mask-content">
+                                <h3><a href="#">Sample</a></h3>
                             </div>
                         </div>
-                        <div class="thumb-container">
-                            <img class="thumb" src="images/backgrounds/chinawok.jpg" alt="">
-                            <div class="mask-container">
-                                <div class="mask-content">
-                                    <h3><a href="#">Sample</a></h3>
-                                </div>
+                    </div>
+                    <div class="thumb-container">
+                        <img class="thumb" src="images/backgrounds/chinawok.jpg" alt="">
+                        <div class="mask-container">
+                            <div class="mask-content">
+                                <h3><a href="#">Sample</a></h3>
                             </div>
                         </div>
-                        <div class="thumb-container">
-                            <img class="thumb" src="images/backgrounds/east22.jpg" alt="">
-                            <div class="mask-container">
-                                <div class="mask-content">
-                                    <h3><a href="#">Sample</a></h3>
-                                </div>
+                    </div>
+                    <div class="thumb-container">
+                        <img class="thumb" src="images/backgrounds/east22.jpg" alt="">
+                        <div class="mask-container">
+                            <div class="mask-content">
+                                <h3><a href="#">Sample</a></h3>
                             </div>
                         </div>
-                        <div class="thumb-container">
-                            <img class="thumb" src="images/backgrounds/indessert.jpg" alt="">
-                            <div class="mask-container">
-                                <div class="mask-content">
-                                    <h3><a href="#">Sample</a></h3>
-                                </div>
+                    </div>
+                    <div class="thumb-container">
+                        <img class="thumb" src="images/backgrounds/indessert.jpg" alt="">
+                        <div class="mask-container">
+                            <div class="mask-content">
+                                <h3><a href="#">Sample</a></h3>
                             </div>
                         </div>
-                        <div class="thumb-container">
-                            <img class="thumb" src="images/backgrounds/liveintent.jpg" alt="">
-                            <div class="mask-container">
-                                <div class="mask-content">
-                                    <h3><a href="#">Sample</a></h3>
-                                </div>
+                    </div>
+                    <div class="thumb-container">
+                        <img class="thumb" src="images/backgrounds/liveintent.jpg" alt="">
+                        <div class="mask-container">
+                            <div class="mask-content">
+                                <h3><a href="#">Sample</a></h3>
                             </div>
                         </div>
-                        <div class="thumb-container">
-                            <img class="thumb" src="images/backgrounds/mforwarder.jpg" alt="">
-                            <div class="mask-container">
-                                <div class="mask-content">
-                                    <h3><a href="#">Sample</a></h3>
-                                </div>
+                    </div>
+                    <div class="thumb-container">
+                        <img class="thumb" src="images/backgrounds/mforwarder.jpg" alt="">
+                        <div class="mask-container">
+                            <div class="mask-content">
+                                <h3><a href="#">Sample</a></h3>
                             </div>
                         </div>
-                        <div class="thumb-container">
-                            <img class="thumb" src="images/backgrounds/naphi.jpg" alt="">
-                            <div class="mask-container">
-                                <div class="mask-content">
-                                    <h3><a href="#">Sample</a></h3>
-                                </div>
+                    </div>
+                    <div class="thumb-container">
+                        <img class="thumb" src="images/backgrounds/naphi.jpg" alt="">
+                        <div class="mask-container">
+                            <div class="mask-content">
+                                <h3><a href="#">Sample</a></h3>
                             </div>
                         </div>
-                        <div class="thumb-container">
-                            <img class="thumb" src="images/backgrounds/opal.jpg" alt="">
-                            <div class="mask-container">
-                                <div class="mask-content">
-                                    <h3><a href="#">Sample</a></h3>
-                                </div>
+                    </div>
+                    <div class="thumb-container">
+                        <img class="thumb" src="images/backgrounds/opal.jpg" alt="">
+                        <div class="mask-container">
+                            <div class="mask-content">
+                                <h3><a href="#">Sample</a></h3>
                             </div>
                         </div>
-                        <div class="thumb-container">
-                            <img class="thumb" src="images/backgrounds/williamsny.jpg" alt="">
-                            <div class="mask-container">
-                                <div class="mask-content">
-                                    <h3><a href="#">Sample</a></h3>
-                                </div>
+                    </div>
+                    <div class="thumb-container">
+                        <img class="thumb" src="images/backgrounds/williamsny.jpg" alt="">
+                        <div class="mask-container">
+                            <div class="mask-content">
+                                <h3><a href="#">Sample</a></h3>
                             </div>
                         </div>
-                        <div class="thumb-container">
-                            <img class="thumb" src="images/backgrounds/spicy-rhino.jpg" alt="">
-                            <div class="mask-container">
-                                <div class="mask-content">
-                                    <h3><a href="#">Sample</a></h3>
-                                </div>
+                    </div>
+                    <div class="thumb-container">
+                        <img class="thumb" src="images/backgrounds/spicy-rhino.jpg" alt="">
+                        <div class="mask-container">
+                            <div class="mask-content">
+                                <h3><a href="#">Sample</a></h3>
                             </div>
                         </div>
-                        <div class="thumb-container">
-                            <img class="thumb" src="images/backgrounds/urbanbicycle.jpg" alt="">
-                            <div class="mask-container">
-                                <div class="mask-content">
-                                    <h3><a href="#">Sample</a></h3>
-                                </div>
+                    </div>
+                    <div class="thumb-container">
+                        <img class="thumb" src="images/backgrounds/urbanbicycle.jpg" alt="">
+                        <div class="mask-container">
+                            <div class="mask-content">
+                                <h3><a href="#">Sample</a></h3>
                             </div>
                         </div>
-                        <div class="thumb-container">
-                            <img class="thumb" src="images/backgrounds/wedding.jpg" alt="">
-                            <div class="mask-container">
-                                <div class="mask-content">
-                                    <h3><a href="#">Sample</a></h3>
-                                </div>
+                    </div>
+                    <div class="thumb-container">
+                        <img class="thumb" src="images/backgrounds/wedding.jpg" alt="">
+                        <div class="mask-container">
+                            <div class="mask-content">
+                                <h3><a href="#">Sample</a></h3>
                             </div>
                         </div>
                     </div>
@@ -176,19 +177,46 @@
         <!-- A B O U T -->
         <div id="about" class="frame about" data-anchor="about">
             <div class="container">
-                <div class="content">
-                    <h1>About</h1>
-                    <hr>
-                    <h3>I'm a visual designer living in New York City.</h3>
-                    <div class="col-xs-4">
-                        <div class="about-me">About</div>
-                        <div class="skills">Skills</div>
+                <div class="about-paper">
+                    <div class="border-left"></div>
+                    <div class="border-right"></div>
+                    <div class="paper-wrapper">
+                        <div id="paper-one">
+                            <div class="paper">
+                                <div class="paper-heading bio">
+                                    <h1>Bio</h1>
+                                </div>
+                                <div class="paper-content">
+                                    <p>Lorem ipsum Do deserunt amet cupidatat irure mollit ea ea esse aliqua velit reprehenderit nisi labore proident culpa laborum non est et id do culpa ullamco culpa commodo eiusmod in proident aliquip ex aliqua ex pariatur officia dolor eu incididunt fugiat laboris elit quis ea nostrud sit in enim in pariatur occaecat velit aliqua reprehenderit incididunt fugiat esse culpa nisi sed ad nulla ut eiusmod Excepteur eiusmod ullamco officia ut nostrud et ut anim anim culpa ex id irure in non adipisicing dolore minim ut mollit irure nulla in elit nostrud sed elit pariatur Ut sunt commodo incididunt ex laborum nisi ex sunt labore in do est labore in nulla cillum in proident veniam et eiusmod fugiat in tempor Duis proident Ut consequat qui labore consectetur eu qui in laboris do aliqua ea aliquip eiusmod do voluptate do incididunt elit exercitation sunt dolore amet cupidatat mollit amet dolor in commodo in nulla reprehenderit laborum voluptate esse magna proident cupidatat velit aliqua ea culpa ad Duis mollit nostrud exercitation enim velit esse laborum nulla eiusmod fugiat minim tempor occaecat do labore officia dolore cillum enim veniam labore labore irure consequat elit Excepteur Ut ex nulla cupidatat ut sit </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="paper-two">
+                            <div class="paper">
+                                <div class="paper-heading design">
+                                    <h1>Design</h1>
+                                </div>
+                                <div class="paper-content">
+                                    <p>Lorem ipsum Do deserunt amet cupidatat irure mollit ea ea esse aliqua velit reprehenderit nisi labore proident culpa laborum non est et id do culpa ullamco culpa commodo eiusmod in proident aliquip ex aliqua ex pariatur officia dolor eu incididunt fugiat laboris elit quis ea nostrud sit in enim in pariatur occaecat velit aliqua reprehenderit incididunt fugiat esse culpa nisi sed ad nulla ut eiusmod Excepteur eiusmod ullamco officia ut nostrud et ut anim anim culpa ex id irure in non adipisicing dolore minim ut mollit irure nulla in elit nostrud sed elit pariatur Ut sunt commodo incididunt ex laborum nisi ex sunt labore in do est labore in nulla cillum in proident veniam et eiusmod fugiat in tempor Duis proident Ut consequat qui labore consectetur eu qui in laboris do aliqua ea aliquip eiusmod do voluptate do incididunt elit exercitation sunt dolore amet cupidatat mollit amet dolor in commodo in nulla reprehenderit laborum voluptate esse magna proident cupidatat velit aliqua ea culpa ad Duis mollit nostrud exercitation enim velit esse laborum nulla eiusmod fugiat minim tempor occaecat do labore officia dolore cillum enim veniam labore labore irure consequat elit Excepteur Ut ex nulla cupidatat ut sit </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="paper-three">
+                            <div class="paper">
+                                <div class="paper-heading fe">
+                                    <h1>Frontend</h1>
+                                </div>
+                                <div class="paper-content">
+                                    <p>Lorem ipsum Do deserunt amet cupidatat irure mollit ea ea esse aliqua velit reprehenderit nisi labore proident culpa laborum non est et id do culpa ullamco culpa commodo eiusmod in proident aliquip ex aliqua ex pariatur officia dolor eu incididunt fugiat laboris elit quis ea nostrud sit in enim in pariatur occaecat velit aliqua reprehenderit incididunt fugiat esse culpa nisi sed ad nulla ut eiusmod Excepteur eiusmod ullamco officia ut nostrud et ut anim anim culpa ex id irure in non adipisicing dolore minim ut mollit irure nulla in elit nostrud sed elit pariatur Ut sunt commodo incididunt ex laborum nisi ex sunt labore in do est labore in nulla cillum in proident veniam et eiusmod fugiat in tempor Duis proident Ut consequat qui labore consectetur eu qui in laboris do aliqua ea aliquip eiusmod do voluptate do incididunt elit exercitation sunt dolore amet cupidatat mollit amet dolor in commodo in nulla reprehenderit laborum voluptate esse magna proident cupidatat velit aliqua ea culpa ad Duis mollit nostrud exercitation enim velit esse laborum nulla eiusmod fugiat minim tempor occaecat do labore officia dolore cillum enim veniam labore labore irure consequat elit Excepteur Ut ex nulla cupidatat ut sit </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- C O N T A C T -->
-        <div id="contact" class="frame contact" data-anchor="contact">
+        <div id="contact" class="frame contact">
             <div class="container">
                 <div class="content">
                     <h1>Contact</h1>
@@ -209,7 +237,8 @@
     </script> -->
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/jquery/jquery.min.js"></script>
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/slick.js/slick/slick.js"></script>
     <!-- endbower -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>

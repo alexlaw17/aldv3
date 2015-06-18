@@ -1,25 +1,22 @@
 $icon-font-path: "../fonts/";
-
 /*
 |--------------------------------------------------------------
 | 1. Imports
 |--------------------------------------------------------------
 */
+
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/fontawesome/scss/font-awesome.scss";
 @import "bourbon/bourbon";
-
 @import url(http://fonts.googleapis.com/css?family=Roboto:500,100,300,100italic,400);
-
 @import url(http://fonts.googleapis.com/css?family=Roboto+Mono);
-
 /*
 |--------------------------------------------------------------
 | 2. Variables
 |--------------------------------------------------------------
 */
 
-$white: #FAFAFA;
+$white: #F9F9F9;
 $lightgray: #E0E0E0;
 $gray: #616161;
 $black: #212121;
@@ -30,22 +27,20 @@ $teal: #00BFA5;
 $red: #F44336;
 $pink: #E91E63;
 $orange: #FF9800;
-$yellow: #FFEC00;
-$purp: #3F51B5;
-
+$yellow: #FFC107;
+$purp: #AB47BC;
+$blue2: #3F51B5;
 $xs: 480px;
 $sm: 768px;
 $md: 992px;
 $lg: 1200px;
-
 .robo {
     font-family: 'Roboto', sans-serif;
 }
 
 .robo-mono {
-    font-family: ("Roboto Mono",);
+    font-family: ("Roboto Mono", );
 }
-
 /*
 |--------------------------------------------------------------
 | 3. Basic Attributes
@@ -107,7 +102,12 @@ a {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     text-align: center;
 }
@@ -116,7 +116,6 @@ ul {
     list-style-type: none;
     padding: 0;
 }
-
 /*
 |--------------------------------------------------------------
 | 3. Global Styles
@@ -126,7 +125,6 @@ ul {
 .wrapper {
     width: 100%;
     height: 100%;
-    position: relative;
 }
 
 .overflow {
@@ -154,15 +152,6 @@ ul {
     width: 90%;
 }
 
-.shade-active {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba($black, 0.5);
-    z-index: 4;
-}
 
 h1 {
     @extend .robo-mono;
@@ -176,7 +165,6 @@ hr {
 h3 {
     font-weight: 100;
 }
-
 /*
 |---------------------------------------
 | 3a. Global Styles - Buttons
@@ -229,7 +217,7 @@ h3 {
     &.arrow-down {
         background-color: $pink;
         position: relative;
-        top: 92vh;
+        top:90vh;
         z-index: 9;
         margin: auto;
         opacity: 0;
@@ -237,8 +225,14 @@ h3 {
             background-color: tint($pink, 14%);
         }
     }
-}
+    &.arrow-right {
+        background-color: $green;
+    }
 
+    &.arrow-left {
+        background-color: $green;
+    }
+}
 /*
 |---------------------------------------
 | 3b. Global Styles - Animation
@@ -256,7 +250,6 @@ h3 {
         transform: translateY(0%);
     }
 }
-
 
 @keyframes preload {
     0% {
@@ -277,7 +270,6 @@ h3 {
     }
 }
 
-
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -287,6 +279,34 @@ h3 {
     }
 }
 
+@keyframes introLine {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes introHead {
+    0% {
+        left: 20%
+    }
+    100% {
+        left: 49%;
+    }
+}
+
+@media(max-width: $sm) {
+    @keyframes introHead {
+        0% {
+            left: 0%
+        }
+        100% {
+            left: 10%;
+        }
+    }
+}
 
 /*
 |--------------------------------------------------------------
@@ -294,24 +314,28 @@ h3 {
 |--------------------------------------------------------------
 */
 
+.hidden {
+    display: none;
+}
+
 #preload {
     position: relative;
     span {
         position: absolute;
         width: 40px;
         height: 12px;
-        background: $yellow;
+        background: $blue;
         opacity: 1;
         animation: preload 1s infinite ease-in-out;
         &:nth-child(2) {
             left: 40px;
             animation-delay: .2s;
-            background: $blue;
+            background: $yellow;
         }
         &:nth-child(3) {
             left: 80px;
             animation-delay: .4s;
-            background: $green;
+            background: $cyan;
         }
         &:nth-child(4) {
             left: 120px;
@@ -321,7 +345,7 @@ h3 {
         &:nth-child(5) {
             left: 160px;
             animation-delay: .8s;
-            background: $orange;
+            background: $purp;
         }
     }
 }
@@ -333,7 +357,7 @@ h3 {
     top: 0;
     left: 0;
     z-index: 9999;
-    background-color: $cyan;
+    background-color: #2C96FF;
     .preload-content {
         position: absolute;
         top: 50%;
@@ -342,7 +366,6 @@ h3 {
         width: 201px;
     }
 }
-
 /*
 |--------------------------------------------------------------
 | 5. Navigation 
@@ -471,7 +494,6 @@ h3 {
         }
     }
 }
-
 /*
 |--------------------------------------------------------------
 | 6. Introduction 
@@ -481,6 +503,7 @@ h3 {
 .intro {
     background-color: $blue;
     font-weight: 100;
+    overflow-x: hidden;
     .logo {
         width: 900px;
         margin: 0 auto;
@@ -491,12 +514,15 @@ h3 {
     }
     hr {
         width: 40%;
+        animation: introLine 1.8s ease 1;
     }
     .intro-pf {
         height: 90%;
         position: absolute;
         bottom: 0;
         left: 49%;
+        animation: introHead 1.5s ease 1;
+        animation-delay: 2s;
         @media (max-width: $sm) {
             left: 10%;
             height: 110%;
@@ -506,7 +532,6 @@ h3 {
         display: none;
     }
 }
-
 /*
 |--------------------------------------------------------------
 | 7. Projects 
@@ -514,7 +539,7 @@ h3 {
 */
 
 .projects {
-    background-color: $purp;
+    background-color: $blue2;
     height: auto;
     padding-top: 80px;
     text-align: center;
@@ -526,7 +551,6 @@ h3 {
         padding-right: 0;
     }
 }
-
 /*
 |---------------------------------------
 | 7a. Projects Thumbnails 
@@ -594,7 +618,7 @@ h3 {
             }
         }
         &:hover {
-            box-shadow: 0px 5px 26px rgba($black, 0.8);
+            box-shadow: 0px 5px 26px -6px rgba($black, 0.8);
             z-index: 5;
             transform: translateY(-1px);
             .thumb {
@@ -607,14 +631,13 @@ h3 {
             }
         }
         &:active {
-            box-shadow: 0px 3px 26px rgba($black, 0.8);
+            box-shadow: 0px 3px 26px -6px rgba($black, 0.8);
             z-index: 5;
             transform: translateY(1px);
             opacity: .8;
         }
     }
 }
-
 /*
 |--------------------------------------------------------------
 | 8. About 
@@ -622,7 +645,124 @@ h3 {
 */
 
 .about {
-    background-color: $red;
+    overflow-x: hidden;
+    padding: 80px 0;
+    height: auto;
+    background-color: $blue;
+    .arrow-right {
+        z-index: 8;
+        bottom: -5px;
+        position: absolute;
+        right: 26%;
+        border: none;
+        padding: 5px 0 4px 2px;
+        &:active {
+            background-color: tint($green,6%);
+        }
+    }
+    
+    .arrow-left {
+        z-index: 8;
+        bottom: -5px;
+        position: absolute;
+        left: 26%;
+        border: none;
+        padding: 5px 2px 4px 0;  
+        &:active {
+            background-color: tint($green,6%);
+        }
+    }
+
+    h1 {
+        color: $white;
+        // @extend .robo;
+        text-align: left;
+        font-weight: 300;
+    }
+    h3 {
+        color: $black;
+    }
+    hr {
+        border-color: $blue;
+    }
+    .container {
+        @media(max-width: 992px) {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .paper-wrapper {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        @media (max-width: 650px) {
+            width: 100%;
+        }
+
+    }
+    .about-paper {
+        // width: 800px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .paper {
+        margin: 0 auto 20px;
+        width: 700px;
+        box-shadow: -1px 9px 25px -3px rgba($black, .4);
+        @media(max-width: 768px) {
+            width: 450px;
+        }
+        @media(max-width: $xs) {
+            width: 300px;
+        }
+        p {
+            color: $black;
+        }
+    }
+
+    .paper-heading {
+        height: 80px;
+        background-color: $red;
+        padding: 25px;
+        &.bio {
+            background-color: $cyan;
+        }
+        &.design {
+            background-color: $purp;
+        }
+        &.fe {
+            background-color: $blue2;
+        }
+    }
+    .paper-content {
+        padding: 25px;
+        background-color: $white;
+    }
+    .border-left {
+        position: absolute;
+        z-index: 8;
+        background: url('../images/border-left.png');
+        width: 80px;
+        background-repeat:repeat-y;
+        height: 100%;
+        @media(max-width:992px){
+            display: none;
+        }
+    }
+    .border-right {
+        position: absolute;
+        z-index: 8;
+        background: url('../images/border-right.png');
+        width: 80px;
+        background-repeat:repeat-y;
+        height: 100%;
+        right:0;
+        @media(max-width:992px){
+            display: none;
+        }
+    }
+
 }
 
 /*
@@ -632,5 +772,5 @@ h3 {
 */
 
 .contact {
-    background-color: $pink;
+    background-color: $purp;
 }

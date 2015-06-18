@@ -1,19 +1,24 @@
 $(function() {
+    'use strict';
     //Loading Screen
-    $(window).load(function() {
-        $("#loader").delay(1500).fadeOut('500', function() {
-            $('.wrapper').removeClass('overflow');
-            $('.intro .content').fadeIn(800, function(){
-            	$('.arrow-down').animate({opacity: 1},500);
+    function loadingScreen() {
+        $(window).load(function() {
+            $('#loader').delay(1500).fadeOut('500', function() {
+                $('.wrapper').removeClass('overflow');
+                $('.intro .content').fadeIn(800, function() {
+                    $('.arrow-down').animate({
+                        opacity: 1
+                    }, 500);
+                });
             });
         });
-    });
-
+    }
+    loadingScreen();
     //Smooth Scroll
     //CSS Tricks Code Snippet - https://css-tricks.com/snippets/jquery/smooth-scrolling/
     function smoothScroll() {
         $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
@@ -28,7 +33,7 @@ $(function() {
     smoothScroll();
 
     //Navigation Bar Toggle
-    function toggle() {
+    function menu() {
         var toggle = $('.sliding-navbar-toggle');
         var main = $('.sliding-navbar-main');
 
@@ -38,5 +43,14 @@ $(function() {
             $('.hamburger').toggleClass('active');
         });
     }
-    toggle();
+    menu();
+
+    $('.paper-wrapper').slick({
+        // autoplay: true,
+        speed: 500,
+        adaptiveHeight: true,
+        // fade: true,
+        arrow: true,
+        cssEase: 'cubic-bezier(.17,.67,.38,.98)'
+    });
 });
