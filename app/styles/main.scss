@@ -204,25 +204,48 @@ h3 {
     }
     &.twitter {
         background-color: #4CB5FF;
+        &:active {
+            background-color: tint(#4CB5FF, 6%);
+        }
     }
     &.google {
         background-color: #E93045;
     }
     &.tumblr {
         background-color: #2C4762;
+        &:active {
+            background-color: tint(#2C4762, 6%);
+        }
+
     }
     &.github {
         background-color: #4E277A;
+        &:active {
+            background-color: tint(#4E277A, 6%);
+        }
+    }
+    &.linkedin {
+        background-color: #1B86BC;
+        &:active {
+            background-color: tint(#1B86BC, 6%);
+        }
+    }
+    &.instagram {
+        background-color: #025787;
+        &:active {
+            background-color: tint(#025787, 6%);
+        }
     }
     &.arrow-down {
-        background-color: $pink;
+        background-color: $lightgray;
         position: relative;
         top:90vh;
-        z-index: 9;
+        z-index: 8;
         margin: auto;
         opacity: 0;
+        color: $blue;
         &:active {
-            background-color: tint($pink, 14%);
+            background-color: tint($white, 14%);
         }
     }
     &.arrow-right {
@@ -388,7 +411,7 @@ h3 {
     width: 200px;
     height: 100%;
     position: fixed;
-    background-color: $cyan;
+    background-color: $white;
     left: -200px;
     transition: all 200ms;
     z-index: 9;
@@ -398,7 +421,7 @@ h3 {
         // border-left: 1px solid shade($cyan, 5%);
         width: 50px;
         height: 50px;
-        background-color: $cyan;
+        background-color: $white;
         font-size: 30px;
         text-align: center;
         padding-top: 4px;
@@ -406,11 +429,11 @@ h3 {
         box-shadow: 10px 0px 13px -5px rgba($black, 0.3);
         z-index: -5;
         &:hover {
-            background-color: shade($cyan, 15%);
+            background-color: shade($white, 15%);
             transition: all 200ms;
         }
         &:active {
-            background-color: tint($cyan, 15%);
+            background-color: tint($white, 15%);
             transition: all 200ms;
         }
         .hamburger {
@@ -420,12 +443,12 @@ h3 {
             left: 9px;
             height: 2px;
             width: 30px;
-            background-color: $white;
+            background-color: $black;
             transition: background .3s;
             &:before {
                 content: '';
                 display: block;
-                background-color: $white;
+                background-color: $black;
                 height: 2px;
                 width: 30px;
                 position: absolute;
@@ -436,7 +459,7 @@ h3 {
             &:after {
                 content: '';
                 display: block;
-                background-color: $white;
+                background-color: $black;
                 height: 2px;
                 width: 30px;
                 position: absolute;
@@ -478,7 +501,7 @@ h3 {
             a {
                 width: 100%;
                 text-align: center;
-                color: $white;
+                color: $black;
                 display: block;
                 font-size: 18px;
                 height: 50px;
@@ -488,16 +511,16 @@ h3 {
                 font-weight: 400;
                 // letter-spacing: 3px;
                 &:hover {
-                    background-color: shade($cyan, 15%);
+                    background-color: shade($white, 15%);
                     transition: all 200ms;
                 }
                 &:active {
-                    background-color: tint($cyan, 15%);
+                    background-color: tint($white, 15%);
                     transition: all 200ms;
                     &::after {
                         content: '';
                         display: block;
-                        border-top: 1px solid $white;
+                        border-top: 1px solid $black;
                         width: 20px;
                         margin: 5px auto;
                     }
@@ -523,6 +546,12 @@ h3 {
     h2 {
         margin-top: 20px;
         font-weight: 100;
+        transition: all .3s ease;
+        display:block;
+    }
+    .swap, .switch {
+        width: auto;
+        font-weight: 400;
     }
     hr {
         width: 40%;
@@ -534,7 +563,7 @@ h3 {
         bottom: 0;
         left: 49%;
         animation: introHead 1.5s ease 1;
-        animation-delay: 2s;
+        animation-delay: 1.5s;
         @media (max-width: $sm) {
             left: 10%;
             height: 110%;
@@ -562,6 +591,9 @@ h3 {
         padding-left: 0;
         padding-right: 0;
     }
+    hr {
+        border-color: $white;
+    }
 }
 /*
 |---------------------------------------
@@ -583,12 +615,18 @@ h3 {
         }
         @media (max-width: $sm) {
             width: 50%;
+            height: 120px;
+        }
+        @media (max-width: $xs) {
+            width: 100%;
+            height: 80px;
         }
         img {
             height: 100%;
             display: block;
             position: relative;
-            transition: all 5s ease;
+            transition: all 2s ease;
+            margin: auto;
         }
         .mask-container {
             width: 100%;
@@ -596,7 +634,7 @@ h3 {
             position: absolute;
             top: 0;
             left: 0;
-            background-color: rgba($lightgray, 0.8);
+            background-color: rgba($black, 0.5);
             opacity: 0;
         }
         .mask-content {
@@ -609,7 +647,7 @@ h3 {
                 height: 100%;
             }
             a {
-                color: $black;
+                color: $white;
                 @extend .robo-mono;
                 width: 100%;
                 height: 100%;
@@ -619,7 +657,7 @@ h3 {
                 justify-content: center;
                 &:after {
                     content: '';
-                    border-top: 1px solid $black;
+                    border-top: 1px solid $white;
                     width: 2%;
                     margin: 0 auto;
                     transform: translateY(20px);
@@ -640,7 +678,6 @@ h3 {
         &:hover {
             box-shadow: 0px 5px 26px -6px rgba($black, 0.8);
             z-index: 5;
-            transform: translateY(-1px);
             .thumb {
                 transform: scale(1.3);
             }
@@ -668,7 +705,8 @@ h3 {
     overflow-x: hidden;
     padding: 80px 0;
     height: auto;
-    background-color: $blue;
+    background-color: $red;
+    overflow-y: hidden;
     .arrow-right {
         z-index: 8;
         bottom: -5px;
@@ -692,7 +730,20 @@ h3 {
             background-color: tint($green,6%);
         }
     }
-
+    .bgbox {   
+        position: absolute;
+        width: 5000px;
+        height: 3000px;
+        z-index: 0;
+        background-color: $white;
+        transform: rotate(39deg);
+        top: 60%;
+        left: 0;
+        box-shadow: -10px 9px 49px -3px rgba($black, .6);
+        @media(max-width:$xs){
+            top:0;
+        }
+    }
     h1 {
         color: $white;
         // @extend .robo;
@@ -729,8 +780,9 @@ h3 {
     .paper {
         position: relative;
         z-index: 7;
-        margin: 0 auto 20px;
+        margin: 20px auto;
         width: 700px;
+        transition: all .2s ease;
         box-shadow: -1px 9px 25px -3px rgba($black, .4);
         @media(max-width: 768px) {
             width: 450px;
@@ -740,6 +792,10 @@ h3 {
         }
         p {
             color: $black;
+        }
+        &:hover {
+            transform: translateY(-20px);
+            cursor: pointer;
         }
     }
 
@@ -808,5 +864,87 @@ h3 {
 */
 
 .contact {
-    background-color: $purp;
+    background-color: $black;
+    padding: 80px 0;
+    height: auto;
+    .contact-content {
+        padding-top: 50px;
+
+        h4 {
+            text-align: left;
+            font-weight: 300;
+            line-height: 30px;
+        }
+    }
+
+    .contact-form {
+        text-align: left;
+        h3 {
+            text-align: left;
+            @extend .robo-mono;
+            padding-bottom: 25px;
+            line-height: 30px;
+        }
+        input,
+        textarea {
+            display: block;
+            margin-bottom: 25px;
+            padding: 10px;
+            width: 100%;
+            @extend .robo-mono;
+            color: $black;
+            border-radius: 6px;
+            border: 0;
+        }
+        textarea {
+            height: 250px;
+        }
+        .contact-submit {
+            width: 240px;
+            padding: 10px;
+            background-color: $yellow;
+            border: 0;
+            @extend .robo;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(34, 34, 34, 0.2);
+            transition: all 0.3s cubic-bezier(0, 0.89, 0, 1);
+            color: $black;
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0px 10px 10px rgba(34, 34, 34, 0.2);
+            }
+            &:active {
+                transform: translateY(4px);
+                box-shadow: 0px 0px 4px rgba(34, 34, 34, 0.2);
+                background-color: tint($yellow, 20%);
+            }
+        }
+    }
+}
+
+/*
+|--------------------------------------------------------------
+| 10. Footer  
+|--------------------------------------------------------------
+*/
+footer {
+    background-color: $red;
+    height: auto;
+    padding: 15px;
+    span {
+        padding-top: 8px;
+        display: block;
+    }
+    .button {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .col-xs-12 {
+        @media(max-width:$sm) {
+            text-align: center;
+            span {
+                padding-bottom: 15px;
+            }
+        }
+    }
 }

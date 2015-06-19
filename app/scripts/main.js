@@ -45,12 +45,46 @@ $(function() {
     }
     menu();
 
-    $('.paper-wrapper').slick({
-        // autoplay: true,
-        speed: 500,
-        adaptiveHeight: true,
-        // fade: true,
-        arrow: true,
-        cssEase: 'cubic-bezier(.17,.67,.38,.98)'
-    });
+    //Controling Slick Plugin
+    function controlSlick() {
+        $('.paper-wrapper').slick({
+            speed: 500,
+            adaptiveHeight: true,
+            arrow: true,
+            cssEase: 'cubic-bezier(.17,.67,.38,.98)'
+        });
+    }
+    controlSlick();
+
+    function introChangeTxt() {
+        var words = ['passion', 'dedication', 'style'];
+        var wordsTwo = ['love', 'precision', 'class'];
+        var index = 0;
+
+        function rotateWords() {
+            $('.swap,.switch').delay(1800).fadeOut('fast', function(){
+                $('.swap').text(words[index]);
+                $('.switch').text(wordsTwo[index]);
+                $('.swap').fadeIn('fast', function(){
+                    if (index === words.length - 1) {
+                        index = 0;
+                    }
+                    else {
+                        index++;
+                    }
+                });
+                $('.switch').fadeIn('fast', function(){
+                    if (index === wordsTwo.length -1) {
+                        index = 0;
+                    }
+                    else {
+                        index++;
+                    }
+                });
+            });
+        }
+        setInterval(rotateWords, 2500);
+    }
+    introChangeTxt();
+
 });
