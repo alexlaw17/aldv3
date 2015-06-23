@@ -21,15 +21,22 @@ $lightgray: #E0E0E0;
 $gray: #616161;
 $black: #212121;
 $cyan: #00BCD4;
-$blue: #2979FF;
-$green: #009688;
+$green: #1FBF92;
+$green2: #0BA37D;
 $teal: #00BFA5;
-$red: #F44336;
+$red: #F24444;
 $pink: #E91E63;
-$orange: #FF9800;
-$yellow: #FFC107;
+$orange: #FF753E;
+$orange2: #FF5E1E;
+$orange3: #FF500B;
+$yellow: #F2BB13;
 $purp: #AB47BC;
-$blue2: #3F51B5;
+$blue: #0656BF;
+$blue2: #0777D9;
+$blue3: #07B0F2;
+$blue4: #07C7F2;
+$blue5: #3DDDF5;
+$blue6: #2C96FF;
 $xs: 480px;
 $sm: 768px;
 $md: 992px;
@@ -237,23 +244,23 @@ h3 {
         }
     }
     &.arrow-down {
-        background-color: $lightgray;
+        background-color: $orange;
         position: relative;
         top:90vh;
         z-index: 8;
         margin: auto;
         opacity: 0;
-        color: $blue;
+        color: $white;
         &:active {
-            background-color: tint($white, 14%);
+            background-color: tint($orange, 6%);
         }
     }
     &.arrow-right {
-        background-color: $green;
+        background-color: $orange;
     }
 
     &.arrow-left {
-        background-color: $green;
+        background-color: $orange;
     }
 }
 /*
@@ -365,22 +372,22 @@ h3 {
         &:nth-child(2) {
             left: 40px;
             animation-delay: .2s;
-            background: $yellow;
+            background: $blue2;
         }
         &:nth-child(3) {
             left: 80px;
             animation-delay: .4s;
-            background: $cyan;
+            background: $blue3;
         }
         &:nth-child(4) {
             left: 120px;
             animation-delay: .6s;
-            background: $red;
+            background: $blue4;
         }
         &:nth-child(5) {
             left: 160px;
             animation-delay: .8s;
-            background: $purp;
+            background: $blue5;
         }
     }
 }
@@ -392,7 +399,7 @@ h3 {
     top: 0;
     left: 0;
     z-index: 9999;
-    background-color: #2C96FF;
+    background-color: $blue6;
     .preload-content {
         position: absolute;
         top: 50%;
@@ -411,7 +418,7 @@ h3 {
     width: 200px;
     height: 100%;
     position: fixed;
-    background-color: $white;
+    background-color: $blue;
     left: -200px;
     transition: all 200ms;
     z-index: 9;
@@ -421,7 +428,7 @@ h3 {
         // border-left: 1px solid shade($cyan, 5%);
         width: 50px;
         height: 50px;
-        background-color: $white;
+        background-color: $blue;
         font-size: 30px;
         text-align: center;
         padding-top: 4px;
@@ -429,11 +436,11 @@ h3 {
         box-shadow: 10px 0px 13px -5px rgba($black, 0.3);
         z-index: -5;
         &:hover {
-            background-color: shade($white, 15%);
+            background-color: shade($blue, 15%);
             transition: all 200ms;
         }
         &:active {
-            background-color: tint($white, 15%);
+            background-color: tint($blue, 15%);
             transition: all 200ms;
         }
         .hamburger {
@@ -443,12 +450,12 @@ h3 {
             left: 9px;
             height: 2px;
             width: 30px;
-            background-color: $black;
+            background-color: $white;
             transition: background .3s;
             &:before {
                 content: '';
                 display: block;
-                background-color: $black;
+                background-color: $white;
                 height: 2px;
                 width: 30px;
                 position: absolute;
@@ -459,7 +466,7 @@ h3 {
             &:after {
                 content: '';
                 display: block;
-                background-color: $black;
+                background-color: $white;
                 height: 2px;
                 width: 30px;
                 position: absolute;
@@ -501,7 +508,7 @@ h3 {
             a {
                 width: 100%;
                 text-align: center;
-                color: $black;
+                color: $white;
                 display: block;
                 font-size: 18px;
                 height: 50px;
@@ -511,16 +518,16 @@ h3 {
                 font-weight: 400;
                 // letter-spacing: 3px;
                 &:hover {
-                    background-color: shade($white, 15%);
+                    background-color: shade($blue, 15%);
                     transition: all 200ms;
                 }
                 &:active {
-                    background-color: tint($white, 15%);
+                    background-color: tint($blue, 15%);
                     transition: all 200ms;
                     &::after {
                         content: '';
                         display: block;
-                        border-top: 1px solid $black;
+                        border-top: 1px solid $white;
                         width: 20px;
                         margin: 5px auto;
                     }
@@ -536,7 +543,7 @@ h3 {
 */
 
 .intro {
-    background-color: $blue;
+    background-color: $blue4;
     font-weight: 100;
     overflow-x: hidden;
     .logo {
@@ -552,6 +559,7 @@ h3 {
     .swap, .switch {
         width: auto;
         font-weight: 400;
+        color: $orange;
     }
     hr {
         width: 40%;
@@ -580,7 +588,7 @@ h3 {
 */
 
 .projects {
-    background-color: $blue2;
+    background-color: $blue6;
     height: auto;
     padding-top: 80px;
     text-align: center;
@@ -705,7 +713,7 @@ h3 {
     overflow-x: hidden;
     padding: 80px 0;
     height: auto;
-    background-color: $red;
+    background-color: $blue3;
     overflow-y: hidden;
     .arrow-right {
         z-index: 8;
@@ -715,7 +723,7 @@ h3 {
         border: none;
         padding: 5px 0 4px 2px;
         &:active {
-            background-color: tint($green,6%);
+            background-color: tint($orange,6%);
         }
     }
     
@@ -727,7 +735,7 @@ h3 {
         border: none;
         padding: 5px 2px 4px 0;  
         &:active {
-            background-color: tint($green,6%);
+            background-color: tint($orange,6%);
         }
     }
     .bgbox {   
@@ -735,7 +743,7 @@ h3 {
         width: 5000px;
         height: 3000px;
         z-index: 0;
-        background-color: $white;
+        background-color: $blue2;
         transform: rotate(39deg);
         top: 60%;
         left: 0;
@@ -804,13 +812,13 @@ h3 {
         background-color: $red;
         padding: 25px;
         &.bio {
-            background-color: $cyan;
+            background-color: $orange;
         }
         &.design {
-            background-color: $purp;
+            background-color: $orange2;
         }
         &.fe {
-            background-color: $blue2;
+            background-color: $orange3;
         }
     }
     .paper-content {
@@ -864,7 +872,7 @@ h3 {
 */
 
 .contact {
-    background-color: $black;
+    background-color: $blue4;
     padding: 80px 0;
     height: auto;
     .contact-content {
@@ -895,6 +903,7 @@ h3 {
             color: $black;
             border-radius: 6px;
             border: 0;
+            background-color: $white;
         }
         textarea {
             height: 250px;
@@ -902,13 +911,13 @@ h3 {
         .contact-submit {
             width: 240px;
             padding: 10px;
-            background-color: $yellow;
+            background-color: $orange;
             border: 0;
             @extend .robo;
             border-radius: 10px;
             box-shadow: 0px 5px 10px rgba(34, 34, 34, 0.2);
             transition: all 0.3s cubic-bezier(0, 0.89, 0, 1);
-            color: $black;
+            color: $white;
             &:hover {
                 transform: translateY(-4px);
                 box-shadow: 0px 10px 10px rgba(34, 34, 34, 0.2);
@@ -916,9 +925,14 @@ h3 {
             &:active {
                 transform: translateY(4px);
                 box-shadow: 0px 0px 4px rgba(34, 34, 34, 0.2);
-                background-color: tint($yellow, 20%);
+                background-color: tint($orange, 10%);
             }
         }
+    }
+
+    .contact-results {
+        padding: 20px 0;
+        @extend .robo-mono;
     }
 }
 
@@ -928,7 +942,7 @@ h3 {
 |--------------------------------------------------------------
 */
 footer {
-    background-color: $red;
+    background-color: $orange;
     height: auto;
     padding: 15px;
     span {
