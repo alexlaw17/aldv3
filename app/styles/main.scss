@@ -244,7 +244,7 @@ h3 {
         }
     }
     &.arrow-down {
-        background-color: $orange;
+        background-color: $red;
         position: relative;
         top:90vh;
         z-index: 8;
@@ -252,15 +252,15 @@ h3 {
         opacity: 0;
         color: $white;
         &:active {
-            background-color: tint($orange, 6%);
+            background-color: tint($red, 6%);
         }
     }
     &.arrow-right {
-        background-color: $orange;
+        background-color: $green;
     }
 
     &.arrow-left {
-        background-color: $orange;
+        background-color: $green;
     }
 }
 /*
@@ -372,22 +372,22 @@ h3 {
         &:nth-child(2) {
             left: 40px;
             animation-delay: .2s;
-            background: $blue2;
+            background: $green;
         }
         &:nth-child(3) {
             left: 80px;
             animation-delay: .4s;
-            background: $blue3;
+            background: $red;
         }
         &:nth-child(4) {
             left: 120px;
             animation-delay: .6s;
-            background: $blue4;
+            background: $yellow;
         }
         &:nth-child(5) {
             left: 160px;
             animation-delay: .8s;
-            background: $blue5;
+            background: $orange;
         }
     }
 }
@@ -399,7 +399,7 @@ h3 {
     top: 0;
     left: 0;
     z-index: 9999;
-    background-color: $blue6;
+    background-color: $black;
     .preload-content {
         position: absolute;
         top: 50%;
@@ -418,7 +418,7 @@ h3 {
     width: 200px;
     height: 100%;
     position: fixed;
-    background-color: $blue;
+    background-color: $black;
     left: -200px;
     transition: all 200ms;
     z-index: 9;
@@ -428,7 +428,7 @@ h3 {
         // border-left: 1px solid shade($cyan, 5%);
         width: 50px;
         height: 50px;
-        background-color: $blue;
+        background-color: $black;
         font-size: 30px;
         text-align: center;
         padding-top: 4px;
@@ -436,11 +436,11 @@ h3 {
         box-shadow: 10px 0px 13px -5px rgba($black, 0.3);
         z-index: -5;
         &:hover {
-            background-color: shade($blue, 15%);
+            background-color: shade($black, 20%);
             transition: all 200ms;
         }
         &:active {
-            background-color: tint($blue, 15%);
+            background-color: tint($black, 15%);
             transition: all 200ms;
         }
         .hamburger {
@@ -518,11 +518,11 @@ h3 {
                 font-weight: 400;
                 // letter-spacing: 3px;
                 &:hover {
-                    background-color: shade($blue, 15%);
+                    background-color: shade($black, 20%);
                     transition: all 200ms;
                 }
                 &:active {
-                    background-color: tint($blue, 15%);
+                    background-color: tint($black, 15%);
                     transition: all 200ms;
                     &::after {
                         content: '';
@@ -543,7 +543,7 @@ h3 {
 */
 
 .intro {
-    background-color: $blue4;
+    background-color: $white;
     font-weight: 100;
     overflow-x: hidden;
     .logo {
@@ -555,15 +555,17 @@ h3 {
         font-weight: 100;
         transition: all .3s ease;
         display:block;
+        color: $black;
     }
     .swap, .switch {
         width: auto;
         font-weight: 400;
-        color: $orange;
+        color: $black;
     }
     hr {
         width: 40%;
         animation: introLine 1.8s ease 1;
+        border-color: $black
     }
     .intro-pf {
         height: 90%;
@@ -588,7 +590,7 @@ h3 {
 */
 
 .projects {
-    background-color: $blue6;
+    background-color: $gray;
     height: auto;
     padding-top: 80px;
     text-align: center;
@@ -713,7 +715,7 @@ h3 {
     overflow-x: hidden;
     padding: 80px 0;
     height: auto;
-    background-color: $blue3;
+    background-color: $gray;
     overflow-y: hidden;
     .arrow-right {
         z-index: 8;
@@ -723,7 +725,7 @@ h3 {
         border: none;
         padding: 5px 0 4px 2px;
         &:active {
-            background-color: tint($orange,6%);
+            background-color: tint($green,6%);
         }
     }
     
@@ -735,7 +737,7 @@ h3 {
         border: none;
         padding: 5px 2px 4px 0;  
         &:active {
-            background-color: tint($orange,6%);
+            background-color: tint($green,6%);
         }
     }
     .bgbox {   
@@ -743,7 +745,7 @@ h3 {
         width: 5000px;
         height: 3000px;
         z-index: 0;
-        background-color: $blue2;
+        background-color: $white;
         transform: rotate(39deg);
         top: 60%;
         left: 0;
@@ -812,13 +814,13 @@ h3 {
         background-color: $red;
         padding: 25px;
         &.bio {
-            background-color: $orange;
+            background-color: $green;
         }
         &.design {
-            background-color: $orange2;
+            background-color: $red;
         }
         &.fe {
-            background-color: $orange3;
+            background-color: $blue;
         }
     }
     .paper-content {
@@ -872,7 +874,7 @@ h3 {
 */
 
 .contact {
-    background-color: $blue4;
+    background-color: tint($black, 45%);
     padding: 80px 0;
     height: auto;
     .contact-content {
@@ -925,7 +927,7 @@ h3 {
             &:active {
                 transform: translateY(4px);
                 box-shadow: 0px 0px 4px rgba(34, 34, 34, 0.2);
-                background-color: tint($orange, 10%);
+                background-color: tint($orange, 15%);
             }
         }
     }
@@ -942,7 +944,7 @@ h3 {
 |--------------------------------------------------------------
 */
 footer {
-    background-color: $orange;
+    background-color: tint($black, 2%);;
     height: auto;
     padding: 15px;
     span {
