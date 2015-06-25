@@ -528,6 +528,21 @@ h3 {
             .al-brand {
                 height: 100px;
                 padding: 15px;
+                background-image: url("../images/al-sm.svg");
+                background-position: center center;
+                background-size: 90% 90%;
+                background-repeat: no-repeat;
+                &:active {
+                   &:after {
+                    content: '';
+                    position: relative;
+                    right: -15px;
+                    top: -15px;
+                    border-right: 3px solid $blue2;
+                    height: 100px;
+                    display: block;
+                    }
+                } 
             }
             a {
                 width: 100%;
@@ -548,14 +563,53 @@ h3 {
                 &:active {
                     background-color: tint($black, 15%);
                     transition: all 200ms;
-                    &::after {
-                        content: '';
-                        display: block;
-                        border-top: 1px solid $white;
-                        width: 20px;
-                        margin: 5px auto;
-                    }
+                    // &::after {
+                    //     content: '';
+                    //     display: block;
+                    //     border-top: 1px solid $white;
+                    //     width: 20px;
+                    //     margin: 5px auto;
+                    // }
                 }
+            }
+            .prj {
+                &:active {
+                    &:after {
+                        content: '';
+                        position: relative;
+                        right: 0px;
+                        top: -37.5px;
+                        border-right: 3px solid $red;
+                        height: 49.75px;
+                        display: block;
+                    }
+                } 
+            }
+            .abt {
+                &:active {
+                    &:after {
+                        content: '';
+                        position: relative;
+                        right: 0px;
+                        top: -37.5px;
+                        border-right: 3px solid $green;
+                        height: 49.75px;
+                        display: block;
+                    }
+                } 
+            }
+            .con {
+                &:active {
+                    &:after {
+                        content: '';
+                        position: relative;
+                        right: 0px;
+                        top: -37.5px;
+                        border-right: 3px solid $yellow;
+                        height: 49.75px;
+                        display: block;
+                    }
+                } 
             }
         }
     }
