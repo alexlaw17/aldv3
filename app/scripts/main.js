@@ -85,6 +85,6 @@ $(function() {
         }
         setInterval(rotateWords, 2500);
     }
-    introChangeTxt();
+    // introChangeTxt();
 
 });
