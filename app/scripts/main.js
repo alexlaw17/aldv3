@@ -3,7 +3,7 @@ $(function() {
     //Loading Screen
     function loadingScreen() {
         $(window).load(function() {
-            $('#loader').delay(1500).fadeOut('500', function() {
+            $('#loader').delay(1800).fadeOut('500', function() {
                 $('.wrapper').removeClass('overflow');
                 $('.intro .content').fadeIn(800, function() {
                     $('.arrow-down').animate({
@@ -14,6 +14,7 @@ $(function() {
         });
     }
     loadingScreen();
+
     //Smooth Scroll
     //CSS Tricks Code Snippet - https://css-tricks.com/snippets/jquery/smooth-scrolling/
     function smoothScroll() {
@@ -32,6 +33,21 @@ $(function() {
     }
     smoothScroll();
 
+    function onScroll() {
+        var scrollPos = $(document).scrollTop();
+        $('.sliding-navbar-content a').each(function() {
+            var currentLink = $(this);
+            var anchor = $(currentLink.attr('href'));
+            if (anchor.position().top <= scrollPos && anchor.position().top + anchor.height() > scrollPos) {
+                $('.sliding-navbar-content ul li a').removeClass('active');
+                currentLink.addClass('active');
+            } else {
+                currentLink.removeClass('active');
+            }
+        });
+    }
+    onScroll();
+    $(document).on('scroll', onScroll);
     //Navigation Bar Toggle
     function menu() {
         var toggle = $('.sliding-navbar-toggle');
@@ -56,35 +72,36 @@ $(function() {
     }
     controlSlick();
 
-    function introChangeTxt() {
-        var words = ['passion', 'dedication', 'style'];
-        var wordsTwo = ['love', 'precision', 'class'];
-        var index = 0;
+    // function 
+    // function introChangeTxt() {
+    //     var words = ['passion', 'dedication', 'style'];
+    //     var wordsTwo = ['love', 'precision', 'class'];
+    //     var index = 0;
 
-        function rotateWords() {
-            $('.swap,.switch').delay(1800).fadeOut('fast', function(){
-                $('.swap').text(words[index]);
-                $('.switch').text(wordsTwo[index]);
-                $('.swap').fadeIn('fast', function(){
-                    if (index === words.length - 1) {
-                        index = 0;
-                    }
-                    else {
-                        index++;
-                    }
-                });
-                $('.switch').fadeIn('fast', function(){
-                    if (index === wordsTwo.length -1) {
-                        index = 0;
-                    }
-                    else {
-                        index++;
-                    }
-                });
-            });
-        }
-        setInterval(rotateWords, 2500);
-    }
+    //     function rotateWords() {
+    //         $('.swap,.switch').delay(1800).fadeOut('fast', function(){
+    //             $('.swap').text(words[index]);
+    //             $('.switch').text(wordsTwo[index]);
+    //             $('.swap').fadeIn('fast', function(){
+    //                 if (index === words.length - 1) {
+    //                     index = 0;
+    //                 }
+    //                 else {
+    //                     index++;
+    //                 }
+    //             });
+    //             $('.switch').fadeIn('fast', function(){
+    //                 if (index === wordsTwo.length -1) {
+    //                     index = 0;
+    //                 }
+    //                 else {
+    //                     index++;
+    //                 }
+    //             });
+    //         });
+    //     }
+    //     setInterval(rotateWords, 2500);
+    // }
     // introChangeTxt();
 
 });
