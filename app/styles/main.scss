@@ -37,6 +37,7 @@ $blue3: #07B0F2;
 $blue4: #07C7F2;
 $blue5: #3DDDF5;
 $blue6: #2C96FF;
+$ip5: 320px;
 $xs: 480px;
 $sm: 768px;
 $md: 992px;
@@ -638,9 +639,15 @@ h3 {
     background-position: center center;
     font-weight: 100;
     overflow: hidden;
+    @media(max-width: 660px){
+        background-image:none;
+    }
     .logo {
         width: 900px;
         margin: 0 auto;
+        @media(max-width:1280px){
+            width: 700px;
+        }
     }
     h2 {
         margin-top: 20px;
@@ -648,6 +655,9 @@ h3 {
         transition: all .3s ease;
         display:block;
         color: $black;
+        @media(max-width:1280px){
+            font-size: 1.3rem;
+        }
     }
     .swap, .switch {
         width: auto;
@@ -667,6 +677,9 @@ h3 {
         animation: balloon 5.5s ease-out 1;
         animation-delay: 2s;
         z-index: 10;
+        @media(max-width: 1020px){
+            right: 11%;
+        }
     }
     .intro-pf {
         height: 435px;
@@ -674,9 +687,22 @@ h3 {
         right: 18%;
         animation: floating 3s ease-in-out infinite;
         // animation-delay: 1.5s;
+        @media(max-width: 1280px) {
+            height: 325px;
+        }
+        @media (max-width: $md) {
+            height: 270px;
+        }
         @media (max-width: $sm) {
-            left: 65%;
-            height: 35%;
+            right: 10%;
+            height: 230px;
+        }
+        @media (max-width: 660px) {
+            right: 10%;
+            height: 215px;
+        }
+        @media (max-width: $ip5) {
+            height: 190px;
         }
     }
 
@@ -692,6 +718,15 @@ h3 {
         background-position: center center;
         background-repeat: no-repeat;
         animation: floating 3s ease-in-out infinite;
+        @media(max-width: 1280px) {
+            left: 0%;
+            bottom: 10%;
+            width: 414px;
+            height: 128px;
+        }
+        @media(max-width:1020px){
+            display: none;
+        }
     }
 
     .cloud-two {
@@ -705,6 +740,15 @@ h3 {
         background-position: center center;
         background-repeat: no-repeat;
         animation: floating 2s ease-in-out infinite;
+        @media(max-width: 1280px) {
+            right: 0%;
+            bottom: 13%;
+            width: 433px;
+            height: 130px;
+        }
+        @media(max-width:1020px){
+            display: none;
+        }
     }
     .cloud-three {
         z-index: 8;
@@ -717,6 +761,12 @@ h3 {
         background-position: center center;
         background-repeat: no-repeat;
         animation: floating 3.5s ease-in-out infinite;
+        @media(max-width: 1280px) {
+            bottom: -38%;
+        }
+        @media(max-width:1020px){
+            display: none;
+        }
     }
     .cloud-four {
         z-index: 8;
@@ -729,6 +779,12 @@ h3 {
         background-position: center center;
         background-repeat: no-repeat;
         animation: floating 3.3s ease-in-out infinite;
+        @media(max-width: 1280px) {
+            bottom: -27%;
+        }
+        @media(max-width:1020px){
+            display: none;
+        }
     }
     .cloud-five {
         z-index: 8;
@@ -741,6 +797,12 @@ h3 {
         background-position: center center;
         background-repeat: no-repeat;
         animation: floating 2s ease-in-out infinite;
+        @media(max-width: 1280px) {
+            right: 0%;
+        }
+        @media(max-width: 660px) {
+            bottom: 16%;
+        }
     }
     .cloud-six {
         z-index: 8;
@@ -753,6 +815,9 @@ h3 {
         background-position: center center;
         background-repeat: no-repeat;
         animation: floating 1.5s ease-in-out infinite;
+        @media(max-width: 660px) {
+            bottom: 76%;
+        }
     }
 
     .content {
