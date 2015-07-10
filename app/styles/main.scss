@@ -655,6 +655,9 @@ h3 {
         transition: all .3s ease;
         display:block;
         color: $black;
+        @media (max-width: 1440px) {
+            font-size: 25px;
+        }
         @media(max-width:1280px){
             font-size: 1.3rem;
         }
@@ -711,13 +714,15 @@ h3 {
         position: absolute;
         left: 20%;
         bottom:10%;
-        // 
         width: 414px;
         height: 168px;;
         background-image: url("../images/cloud-one.svg");
         background-position: center center;
         background-repeat: no-repeat;
         animation: floating 3s ease-in-out infinite;
+        @media (max-width: 1440px) {
+            left: 0%;
+        }
         @media(max-width: 1280px) {
             left: 0%;
             bottom: 10%;
@@ -740,6 +745,9 @@ h3 {
         background-position: center center;
         background-repeat: no-repeat;
         animation: floating 2s ease-in-out infinite;
+        @media (max-width: 1440px) {
+            right: 10%;
+        }
         @media(max-width: 1280px) {
             right: 0%;
             bottom: 13%;
@@ -797,6 +805,9 @@ h3 {
         background-position: center center;
         background-repeat: no-repeat;
         animation: floating 2s ease-in-out infinite;
+        @media (max-width: 1440px) {
+            right: 12%;
+        }
         @media(max-width: 1280px) {
             right: 0%;
         }
@@ -1033,6 +1044,7 @@ h3 {
         position: relative;
         z-index: 7;
         margin: 95px auto 60px auto;
+        height: 565px;
         width: 600px;
         transition: all .2s ease;
         box-shadow: -1px 9px 25px -3px rgba($black, .4);
@@ -1044,6 +1056,7 @@ h3 {
         }
         p {
             color: $black;
+            font-weight: 300;
             line-height: 35px;
             @media (max-width: 768px) {
                 line-height: 20px;
@@ -1074,21 +1087,26 @@ h3 {
     .paper-heading {
         position: relative;
         height: 100px;
-        background-color: $red;
         padding: 35px;
+        background-color: $white;
+        border-bottom: 1px solid $lightgray;
         h1 {
-            @extend .robo;
+            @extend .robo-mono;
             font-weight: 400;
+            color: $gray;
+            text-align: center;
+            padding-top: 10px;
+
         }
-        &.bio {
-            background-color: $green;
-        }
-        &.design {
-            background-color: $red;
-        }
-        &.fe {
-            background-color: $blue;
-        }
+        // &.bio {
+        //     background-color: $green;
+        // }
+        // &.design {
+        //     background-color: $red;
+        // }
+        // &.fe {
+        //     background-color: $blue;
+        // }
     }
     .paper-content {
         padding: 35px;
