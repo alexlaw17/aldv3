@@ -712,7 +712,7 @@ h3 {
     .cloud-one {
         z-index: 8;
         position: absolute;
-        left: 10%;
+        left: 20%;
         bottom:10%;
         width: 414px;
         height: 168px;;
@@ -737,7 +737,7 @@ h3 {
     .cloud-two {
         z-index: 8;
         position: absolute;
-        right: 10%;
+        right: 20%;
         bottom:3%;
         width: 463px;
         height: 180px;
@@ -1048,6 +1048,7 @@ h3 {
         width: 600px;
         transition: all .2s ease;
         box-shadow: -1px 9px 25px -3px rgba($black, .4);
+        background-color: $white;
         @media(max-width: 768px) {
             width: 450px;
         }
@@ -1111,6 +1112,42 @@ h3 {
     .paper-content {
         padding: 35px;
         background-color: $white;
+        color: $black;
+            ul {
+                li {
+                    font-weight: 300;
+                    line-height: 50px;
+                    @media (max-width: 768px) {
+                        line-height: 40px;
+                    }
+                    @media (max-width: $xs) {
+                        line-height: 30px;
+                    }
+                }
+            }
+        span {
+            display: block;
+            margin-left: 25px;
+            height: 40px;
+            border-radius:3px;
+            &.ps {
+                width: 90%;
+                background-color: $blue;
+            }
+            &.ai {
+                width: 87%;
+                background-color: $orange;
+            }
+            &.ind {
+                width: 65%;
+                background-color: #DB007B;
+            }
+            &.sk3 {
+                width: 75%;
+                background-color: $yellow;
+            }
+
+        }
     }
     .border-left {
         position: absolute;
