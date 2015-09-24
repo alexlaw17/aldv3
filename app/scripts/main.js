@@ -46,7 +46,8 @@ $(function() {
             }
         });
     }
-    onScroll();
+    // onScroll();
+    
     $(document).on('scroll', onScroll);
     //Navigation Bar Toggle
     function menu() {

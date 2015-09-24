@@ -245,7 +245,7 @@ h3 {
         }
     }
     &.arrow-down {
-        background-color: $red;
+        background-color: $gray;
         position: relative;
         top:90vh;
         z-index: 8;
@@ -253,15 +253,15 @@ h3 {
         opacity: 0;
         color: $white;
         &:active {
-            background-color: tint($red, 6%);
+            background-color: tint($gray, 6%);
         }
     }
     &.arrow-right {
-        background-color: $green;
+        background-color: $gray;
     }
 
     &.arrow-left {
-        background-color: $green;
+        background-color: $gray;
     }
 }
 /*
@@ -295,18 +295,18 @@ h3 {
     0% {
         opacity: 1;
         transform: translateY(0px);
-        box-shadow: 0px 0px 3px rgba($black, 0.1);
+        box-shadow: 0px 0px 3px rgba($white, 0.1);
     }
     50% {
         opacity: 1;
         background: $lightgray;
         transform: translateY(-40px);
-        box-shadow: 0px 20px 3px rgba($black, 0.05);
+        box-shadow: 0px 20px 3px rgba($white, 0.05);
     }
     100% {
         opacity: 1;
         transform: translateY(0px);
-        box-shadow: 0px 0px 3px rgba($black, 0.1);
+        box-shadow: 0px 0px 3px rgba($white, 0.1);
     }
 }
 
@@ -397,28 +397,28 @@ h3 {
         position: absolute;
         width: 40px;
         height: 12px;
-        background: $blue;
+        background: $black;
         opacity: 1;
         animation: preload 1s infinite ease-in-out;
         &:nth-child(2) {
             left: 40px;
             animation-delay: .2s;
-            background: $green;
+            background: $gray;
         }
         &:nth-child(3) {
             left: 80px;
             animation-delay: .4s;
-            background: $red;
+            background: $lightgray;
         }
         &:nth-child(4) {
             left: 120px;
             animation-delay: .6s;
-            background: $yellow;
+            background: $black;
         }
         &:nth-child(5) {
             left: 160px;
             animation-delay: .8s;
-            background: $orange;
+            background: $gray;
         }
     }
 }
@@ -545,7 +545,7 @@ h3 {
                     position: relative;
                     right: -15px;
                     top: -15px;
-                    border-right: 2px solid $blue2;
+                    border-right: 2px solid $white;
                     height: 100px;
                     display: block;
                     animation: brandNavHighlight .1s ease;
@@ -588,7 +588,7 @@ h3 {
                         position: relative;
                         right: 0px;
                         top: -37.5px;
-                        border-right: 2px solid $red;
+                        border-right: 2px solid $white;
                         height: 49.75px;
                         display: block;
                         animation: navHighlight .1s ease;
@@ -602,7 +602,7 @@ h3 {
                         position: relative;
                         right: 0px;
                         top: -37.5px;
-                        border-right: 2px solid $green;
+                        border-right: 2px solid $white;
                         height: 49.75px;
                         display: block;
                         animation: navHighlight .1s ease;
@@ -616,7 +616,21 @@ h3 {
                         position: relative;
                         right: 0px;
                         top: -37.5px;
-                        border-right: 2px solid $yellow;
+                        border-right: 2px solid $white;
+                        height: 49.75px;
+                        display: block;
+                        animation: navHighlight .1s ease;
+                    }
+                } 
+            }
+            .blog {
+                &.active {
+                    &:after {
+                        content: '';
+                        position: relative;
+                        right: 0px;
+                        top: -37.5px;
+                        border-right: 2px solid $white;
                         height: 49.75px;
                         display: block;
                         animation: navHighlight .1s ease;
@@ -977,7 +991,7 @@ h3 {
         border: none;
         padding: 5px 0 4px 2px;
         &:active {
-            background-color: tint($green,6%);
+            background-color: tint($gray,6%);
         }
     }
     
@@ -989,7 +1003,7 @@ h3 {
         border: none;
         padding: 5px 2px 4px 0;  
         &:active {
-            background-color: tint($green,6%);
+            background-color: tint($gray,6%);
         }
     }
     .bgbox {   
@@ -1080,6 +1094,14 @@ h3 {
             z-index: 8;
             &.paperbio {
                 background-image: url("../images/profile.png");
+                background-size: cover;
+            }
+            &.paperdesign {
+                background-image: url("../images/design.png");
+                background-size: cover;
+            }
+            &.papercode {
+                background-image: url("../images/frontend.png");
                 background-size: cover;
             }
         }
