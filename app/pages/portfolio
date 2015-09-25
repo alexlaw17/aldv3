@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alex Law Design</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/slick.js/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/slick.js/slick/slick-theme.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="wrapper overflow">
+        <!-- L O A D E R -->
+        <div id="loader" class="preload-screen">
+            <div class="preload-content">
+                <div id="preload">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- N A V I G A T I O N -->
+        <div id="nav" class="sliding-navbar">
+            <div class="sliding-navbar-main">
+                <div class="sliding-navbar-toggle">
+                    <span class="hamburger"></span>
+                </div>
+                <div class="sliding-navbar-content">
+                    <ul>
+                        <li>
+                            <a class="al-brand active" href="#intro"></a>
+                        </li>
+                        <li><a class="prj" href="#projects">Projects</a></li>
+                        <li><a class="abt" href="#about">About</a></li>
+                        <li><a class="con" href="#contact">Contact</a></li>
+                        <li><a class="blog" href="http://alexlawdesign.tumblr.com/" target="_blank">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- I N T R O D U C T I O N -->
+        <div id="intro" class="frame intro">
+            <div class="container">
+                <div class="cloud-one"></div>
+                <div class="cloud-two"></div>
+                <div class="cloud-three"></div>
+                <div class="cloud-four"></div>
+                <div class="cloud-six"></div>
+                <div class="balloon"><img class="intro-pf" src="images/balloon.svg" alt=""></div>
+                <div class="cloud-five"></div>
+                <div class="content">
+                    <img class="img-responsive logo" src="images/al-main.svg" alt="">
+                    <hr>
+                    <h2>I like to design with <span class="swap">style</span> and <span class="switch">class</span></h2>
+                </div>
+                <a href="#projects" class="button arrow-down"><i class="fa fa-caret-down"></i></a>
+            </div>
+        </div>
+       
+        <!-- F O O T E R -->
+        <footer>
+            <div class="container">
+                <div class="col-xs-12 col-sm-8"><span>&#169; 2015 Alex Law Design</span></div>
+                <div class="col-xs-12 col-sm-4">
+                    <a class="button tumblr" href="http://alexlawdesign.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
+                    <a class="button twitter" href="https://twitter.com/Rhinoceros07" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a class="button instagram" href="https://instagram.com/07rhino/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a class="button linkedin" href="https://www.linkedin.com/pub/alex-law/34/965/6b7" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a class="button github" href="https://github.com/alexlaw17" target="_blank"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--     <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script> -->
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<!--     <script src="/bower_components/jquery/jquery.js"></script> -->
+    <script src="/bower_components/slick.js/slick/slick.js"></script>
+    <script src="/bower_components/jquery.appear/jquery.appear.js"></script>
+    <!-- endbower -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
