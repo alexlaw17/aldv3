@@ -647,7 +647,7 @@ h3 {
 */
 
 .intro {
-    background-image: url("../images/cloudbg.svg");
+    background-image: url("../images/work-bg-dark.jpg");
     background-size: cover;
     background-color: $white;
     background-position: center center;
@@ -664,11 +664,14 @@ h3 {
         }
     }
     h2 {
+        @extend .robo-mono;
         margin-top: 20px;
         font-weight: 100;
         transition: all .3s ease;
         display:block;
         color: $black;
+        letter-spacing: -2px;
+        text-transform: uppercase;
         @media (max-width: 1440px) {
             font-size: 25px;
         }
