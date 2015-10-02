@@ -112,7 +112,7 @@ gulp.task('wiredep', function () {
     }))
     .pipe(gulp.dest('app/styles'));
 
-  gulp.src('app/*.html')
+  gulp.src(['app/*.html', 'app/'+'**/*.html'])
     .pipe(wiredep({
       exclude: ['bootstrap-sass-official'],
       ignorePath: /^(\.\.\/)*\.\./
