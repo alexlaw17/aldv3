@@ -35,7 +35,7 @@ $(function() {
 
     function onScroll() {
         var scrollPos = $(document).scrollTop();
-        $('.sliding-navbar-content a').each(function() {
+        $('.sliding-navbar-content .scroll').each(function() {
             var currentLink = $(this);
             var anchor = $(currentLink.attr('href'));
             if (anchor.position().top <= scrollPos && anchor.position().top + anchor.height() > scrollPos) {
@@ -117,4 +117,6 @@ $(function() {
         }); 
     }
     skillbar();
+
+
 });

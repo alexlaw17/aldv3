@@ -65,7 +65,7 @@ body {
     padding: 0;
     @extend .robo;
     color: $white;
-    font-size: 18px;
+    font-size: 17px;
     @media (max-width: $sm) {
         h1 {
             font-size: 1.8rem;
@@ -75,9 +75,11 @@ body {
         }
         h3 {
             font-size: 1rem;
+            font-weight: 400;
         }
         h4 {
-            font-size: .7rem;
+            font-size: .8rem;
+            font-weight: 400;
         }
         h5 {
             font-size: .6rem;
@@ -86,7 +88,7 @@ body {
             font-size: .5rem;
         }
         p {
-            font-size: 12px;
+            font-size: 15px;
         }
     }
     ::selection {
@@ -164,7 +166,8 @@ ul {
 
 
 h1 {
-    @extend .robo-mono;
+    @extend .robo;
+    font-weight: 400;
 }
 
 hr {
@@ -192,12 +195,25 @@ h3 {
     padding-top: 8px;
     transition: all 0.3s cubic-bezier(0, 0.89, 0, 1);
     display: block;
+
+    @media(max-width: $xs) {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
     &:hover {
         transform: translateY(-4px);
         box-shadow: 0px 10px 10px rgba(34, 34, 34, 0.2);
         font-size: 25px;
         padding-top: 5px;
         color: $white;
+        
+        @media(max-width: $xs) {
+        font-size: 15px;
+        }
+        @media(max-width: $ip5) {
+        transform: translateY(0);
+        }
     }
     &:active {
         transform: translateY(4px);
@@ -205,6 +221,10 @@ h3 {
         font-size: 21px;
         padding-top: 9px;
         color: $white;
+
+        @media(max-width: $xs) {
+            font-size: 12px;
+        }
     }
     &:visted {
         color: $white;
@@ -563,8 +583,9 @@ h3 {
                 font-size: 18px;
                 height: 50px;
                 padding-top: 12px;
-                @extend .robo-mono;
-                font-weight: 400;
+                @extend .robo;
+                font-weight: 300;
+                letter-spacing: 1px;
                 &:hover {
                     background-color: shade($black, 20%);
                     transition: all 200ms;
@@ -647,15 +668,13 @@ h3 {
 */
 
 .intro {
-    background-image: url("../images/work-bg-dark.jpg");
+    background-image: url("../images/les-bg.jpg");
     background-size: cover;
     background-color: $white;
-    background-position: center center;
+    background-position: top center;
     font-weight: 100;
     overflow: hidden;
-    @media(max-width: 660px){
-        background-image:none;
-    }
+
     .logo {
         width: 900px;
         margin: 0 auto;
@@ -664,19 +683,22 @@ h3 {
         }
     }
     h2 {
-        @extend .robo-mono;
+        @extend .robo;
         margin-top: 20px;
-        font-weight: 100;
+        font-weight: 400;
         transition: all .3s ease;
         display:block;
         color: $black;
-        letter-spacing: -2px;
-        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 24px;
         @media (max-width: 1440px) {
             font-size: 25px;
         }
         @media(max-width:1280px){
             font-size: 1.3rem;
+        }
+        @media(max-width: $ip5) {
+            font-size: 18px;
         }
     }
     .swap, .switch {
@@ -697,6 +719,7 @@ h3 {
         animation: balloon 5.5s ease-out 1;
         animation-delay: 2s;
         z-index: 10;
+        display: none; /*for now*/
         @media(max-width: 1020px){
             right: 11%;
         }
@@ -726,127 +749,127 @@ h3 {
         }
     }
 
-    .cloud-one {
-        z-index: 8;
-        position: absolute;
-        left: 20%;
-        bottom:10%;
-        width: 414px;
-        height: 168px;;
-        background-image: url("../images/cloud-one.svg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        animation: floating 3s ease-in-out infinite;
-        @media (max-width: 1440px) {
-            left: 0%;
-        }
-        @media(max-width: 1280px) {
-            left: 0%;
-            bottom: 10%;
-            width: 414px;
-            height: 128px;
-        }
-        @media(max-width:1020px){
-            display: none;
-        }
-    }
+    // .cloud-one {
+    //     z-index: 8;
+    //     position: absolute;
+    //     left: 20%;
+    //     bottom:10%;
+    //     width: 414px;
+    //     height: 168px;;
+    //     background-image: url("../images/cloud-one.svg");
+    //     background-position: center center;
+    //     background-repeat: no-repeat;
+    //     animation: floating 3s ease-in-out infinite;
+    //     @media (max-width: 1440px) {
+    //         left: 0%;
+    //     }
+    //     @media(max-width: 1280px) {
+    //         left: 0%;
+    //         bottom: 10%;
+    //         width: 414px;
+    //         height: 128px;
+    //     }
+    //     @media(max-width:1020px){
+    //         display: none;
+    //     }
+    // }
 
-    .cloud-two {
-        z-index: 8;
-        position: absolute;
-        right: 20%;
-        bottom:3%;
-        width: 463px;
-        height: 180px;
-        background-image: url("../images/cloud-two.svg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        animation: floating 2s ease-in-out infinite;
-        @media (max-width: 1440px) {
-            right: 10%;
-        }
-        @media(max-width: 1280px) {
-            right: 0%;
-            bottom: 13%;
-            width: 433px;
-            height: 130px;
-        }
-        @media(max-width:1020px){
-            display: none;
-        }
-    }
-    .cloud-three {
-        z-index: 8;
-        position: absolute;
-        right: -235px;
-        bottom: -28%;
-        width: 855px;
-        height: 395px;
-        background-image: url("../images/cloud-three.svg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        animation: floating 3.5s ease-in-out infinite;
-        @media(max-width: 1280px) {
-            bottom: -38%;
-        }
-        @media(max-width:1020px){
-            display: none;
-        }
-    }
-    .cloud-four {
-        z-index: 8;
-        position: absolute;
-        left: -360px;
-        bottom: -17%;
-        width: 855px;
-        height: 338px;
-        background-image: url("../images/cloud-four.svg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        animation: floating 3.3s ease-in-out infinite;
-        @media(max-width: 1280px) {
-            bottom: -27%;
-        }
-        @media(max-width:1020px){
-            display: none;
-        }
-    }
-    .cloud-five {
-        z-index: 8;
-        position: absolute;
-        right: 21%;
-        bottom: 36%;
-        width: 80px;
-        height: 68px;
-        background-image: url("../images/cloud-five.svg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        animation: floating 2s ease-in-out infinite;
-        @media (max-width: 1440px) {
-            right: 12%;
-        }
-        @media(max-width: 1280px) {
-            right: 0%;
-        }
-        @media(max-width: 660px) {
-            bottom: 16%;
-        }
-    }
-    .cloud-six {
-        z-index: 8;
-        position: absolute;
-        left: 11%;
-        bottom: 36%;
-        width: 130px;
-        height: 68px;
-        background-image: url("../images/cloud-six.svg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        animation: floating 1.5s ease-in-out infinite;
-        @media(max-width: 660px) {
-            bottom: 76%;
-        }
-    }
+    // .cloud-two {
+    //     z-index: 8;
+    //     position: absolute;
+    //     right: 20%;
+    //     bottom:3%;
+    //     width: 463px;
+    //     height: 180px;
+    //     background-image: url("../images/cloud-two.svg");
+    //     background-position: center center;
+    //     background-repeat: no-repeat;
+    //     animation: floating 2s ease-in-out infinite;
+    //     @media (max-width: 1440px) {
+    //         right: 10%;
+    //     }
+    //     @media(max-width: 1280px) {
+    //         right: 0%;
+    //         bottom: 13%;
+    //         width: 433px;
+    //         height: 130px;
+    //     }
+    //     @media(max-width:1020px){
+    //         display: none;
+    //     }
+    // }
+    // .cloud-three {
+    //     z-index: 8;
+    //     position: absolute;
+    //     right: -235px;
+    //     bottom: -28%;
+    //     width: 855px;
+    //     height: 395px;
+    //     background-image: url("../images/cloud-three.svg");
+    //     background-position: center center;
+    //     background-repeat: no-repeat;
+    //     animation: floating 3.5s ease-in-out infinite;
+    //     @media(max-width: 1280px) {
+    //         bottom: -38%;
+    //     }
+    //     @media(max-width:1020px){
+    //         display: none;
+    //     }
+    // }
+    // .cloud-four {
+    //     z-index: 8;
+    //     position: absolute;
+    //     left: -360px;
+    //     bottom: -17%;
+    //     width: 855px;
+    //     height: 338px;
+    //     background-image: url("../images/cloud-four.svg");
+    //     background-position: center center;
+    //     background-repeat: no-repeat;
+    //     animation: floating 3.3s ease-in-out infinite;
+    //     @media(max-width: 1280px) {
+    //         bottom: -27%;
+    //     }
+    //     @media(max-width:1020px){
+    //         display: none;
+    //     }
+    // }
+    // .cloud-five {
+    //     z-index: 8;
+    //     position: absolute;
+    //     right: 21%;
+    //     bottom: 36%;
+    //     width: 80px;
+    //     height: 68px;
+    //     background-image: url("../images/cloud-five.svg");
+    //     background-position: center center;
+    //     background-repeat: no-repeat;
+    //     animation: floating 2s ease-in-out infinite;
+    //     @media (max-width: 1440px) {
+    //         right: 12%;
+    //     }
+    //     @media(max-width: 1280px) {
+    //         right: 0%;
+    //     }
+    //     @media(max-width: 660px) {
+    //         bottom: 16%;
+    //     }
+    // }
+    // .cloud-six {
+    //     z-index: 8;
+    //     position: absolute;
+    //     left: 11%;
+    //     bottom: 36%;
+    //     width: 130px;
+    //     height: 68px;
+    //     background-image: url("../images/cloud-six.svg");
+    //     background-position: center center;
+    //     background-repeat: no-repeat;
+    //     animation: floating 1.5s ease-in-out infinite;
+    //     @media(max-width: 660px) {
+    //         bottom: 76%;
+    //     }
+    // }
 
     .content {
         display: none;
@@ -869,6 +892,9 @@ h3 {
     .container-fluid {
         padding-left: 0;
         padding-right: 0;
+    }
+    h1, h3 {
+        color: $white;
     }
     hr {
         border-color: $white;
@@ -899,7 +925,7 @@ h3 {
         }
         @media (max-width: $xs) {
             width: 100%;
-            height: 80px;
+            height: 200px;
         }
         img {
             
@@ -907,8 +933,7 @@ h3 {
             position: relative;
             transition: all .8s ease;
             margin: auto;
-            filter: grayscale(1);
-
+            filter: brightness(1.2) contrast(0.6) grayscale(0.4) saturate(2.1);
         }
         
         .thumb {
@@ -938,6 +963,7 @@ h3 {
                 }
             }
             a {
+                font-weight: 400;
                 color: $white;
                 @extend .robo;
                 width: 100%;
@@ -1099,6 +1125,9 @@ h3 {
         &:hover {
             transform: translateY(-20px);
             cursor: pointer;
+            @media(max-width: $ip5) {
+                transform: translateY(0);
+            }
         }
         .heading-img{
             height: 100px;
@@ -1130,7 +1159,7 @@ h3 {
         background-color: $white;
         border-bottom: 1px solid $lightgray;
         h1 {
-            @extend .robo-mono;
+            @extend .robo;
             font-weight: 400;
             color: $gray;
             text-align: center;
@@ -1160,6 +1189,27 @@ h3 {
                     }
                     @media (max-width: $xs) {
                         line-height: 30px;
+                    }
+                }
+            }
+
+            a {
+                color: $black;
+                 &:after {
+                        content: '';
+                        width: 0;
+                        height: 1px;
+                        border-bottom: 1px solid $black;
+                        display: block;
+                        transition: all .5s ease-in-out;
+                }
+                &:hover {
+                    font-weight: 400;
+                    &:after {
+                        content: '';
+                        width: 11%;
+                        height: 1px;
+                        border-bottom: 1px solid $black;
                     }
                 }
             }
@@ -1306,7 +1356,9 @@ h3 {
 */
 
 .contact {
-    background-color: tint($black, 45%);
+    background-image: url("../images/work-bg-dark.jpg");
+    background-size: cover;
+    background-position: center center;
     padding: 80px 0;
     height: auto;
     .contact-content {
@@ -1323,7 +1375,8 @@ h3 {
         text-align: left;
         h3 {
             text-align: left;
-            @extend .robo-mono;
+            @extend .robo;
+            font-weight: 400;
             padding-bottom: 25px;
             line-height: 30px;
         }
@@ -1480,9 +1533,9 @@ footer {
                     }
                 }
                 h3 {
-                    line-height: 1.5em;
+                    line-height: 35px;
                     display: block;
-                    font-size: .9em;
+                    font-size: 15px;
                 }
                 h5 {
                     padding: 20px 0;
@@ -1516,7 +1569,11 @@ footer {
     .opal {
         background-image: url("../images/projects/opal/opal-bg.jpg");
     }
-
+    
+    .naphi {
+        background-image: url("../images/projects/naphi/naphi-bg.jpg");
+    }
+    
     .knockerball {
         background-image: url("../images/projects/knockerball/knockerball-bg.jpg");
     }
@@ -1542,6 +1599,10 @@ footer {
 
     .bbw {
         background-color: #525a55;
+    }
+
+    .aldv2 {
+        background-image: url("../images/projects/aldv2/aldv2-bg.jpg");
     }
 
 }
