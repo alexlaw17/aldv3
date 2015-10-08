@@ -47,7 +47,7 @@ $(function() {
         });
     }
     // onScroll();
-    
+
     $(document).on('scroll', onScroll);
     //Navigation Bar Toggle
     function menu() {
@@ -109,14 +109,41 @@ $(function() {
         $('.skillbar').each(function() {
             $(this).appear(function() {
                 $(this).find('.count-bar').animate({
-                    width:$(this).attr('data-percent')
-                },1500);
+                    width: $(this).attr('data-percent')
+                }, 1500);
                 var percent = $(this).attr('data-percent');
                 $(this).find('.count').html('<span>' + percent + '</span>');
             });
-        }); 
+        });
     }
     skillbar();
 
-
+    function transitionPg() {
+        $(".animsition").animsition({
+            inClass: 'fade-in',
+            outClass: 'fade-out',
+            inDuration: 1000,
+            outDuration: 500,
+            // linkElement: '.animsition-link',
+            linkElement: 'a:not([target="_blank"]):not([href^=#])',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+            loading: true,
+            loadingParentElement: 'body', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: ['animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay: false,
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body',
+            transition: function(url) {
+                window.location.href = url;
+            }
+        });
+    }
+    transitionPg();
 });

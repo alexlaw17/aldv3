@@ -78,6 +78,7 @@ body {
     padding: 0;
     @extend .robo;
     color: $white;
+    @extend .star-bg;
     font-size: 17px;
     @media (max-width: $sm) {
         h1 {
