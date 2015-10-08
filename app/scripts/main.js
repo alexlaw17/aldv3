@@ -119,7 +119,7 @@ $(function() {
     skillbar();
 
     function transitionPg() {
-        $(".animsition").animsition({
+        $('.animsition').animsition({
             inClass: 'fade-in',
             outClass: 'fade-out',
             inDuration: 1000,
