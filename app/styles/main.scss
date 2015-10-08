@@ -51,6 +51,19 @@ $lg: 1200px;
 .robo-mono {
     font-family: ("Roboto Mono", );
 }
+
+.star-bg {
+    background-image: url("../images/stardust.png");
+    background-repeat: repeat;
+}
+.darkwall-bg {
+    background-image: url("../images/dark_wall.png");
+    background-repeat: repeat;
+}
+.binding-bg {
+    background-image: url("../images/binding_dark.png");
+    background-repeat: repeat;
+}
 /*
 |--------------------------------------------------------------
 | 3. Basic Attributes
@@ -173,6 +186,7 @@ h1 {
 hr {
     width: 45px;
     margin: 30px auto;
+    border-color: $orange;
 }
 
 h3 {
@@ -267,7 +281,7 @@ h3 {
         }
     }
     &.arrow-down {
-        background-color: $gray;
+        background-color: $orange;
         position: relative;
         top:90vh;
         z-index: 8;
@@ -275,15 +289,21 @@ h3 {
         opacity: 0;
         color: $white;
         &:active {
-            background-color: tint($gray, 6%);
+            background-color: tint($orange, 15%);
         }
     }
     &.arrow-right {
-        background-color: $gray;
+        background-color: $orange;
+        @media(max-width: $ip5) {
+            display: none;
+        }
     }
 
     &.arrow-left {
-        background-color: $gray;
+        background-color: $orange;
+        @media(max-width: $ip5) {
+            display: none;
+        }
     }
 }
 /*
@@ -453,6 +473,7 @@ h3 {
     left: 0;
     z-index: 9999;
     background-color: $black;
+    @extend .star-bg;
     .preload-content {
         position: absolute;
         top: 50%;
@@ -475,6 +496,7 @@ h3 {
     left: -200px;
     transition: all 200ms;
     z-index: 20;
+    @extend .star-bg;
     .sliding-navbar-toggle {
         left: 200px;
         position: absolute;
@@ -488,6 +510,7 @@ h3 {
         cursor: pointer;
         box-shadow: 10px 0px 13px -5px rgba($black, 0.3);
         z-index: -5;
+        @extend .star-bg;
         &:hover {
             background-color: shade($black, 20%);
             transition: all 200ms;
@@ -503,12 +526,12 @@ h3 {
             left: 9px;
             height: 2px;
             width: 30px;
-            background-color: $white;
+            background-color: $orange;
             transition: background .3s;
             &:before {
                 content: '';
                 display: block;
-                background-color: $white;
+                background-color: $orange;
                 height: 2px;
                 width: 30px;
                 position: absolute;
@@ -519,7 +542,7 @@ h3 {
             &:after {
                 content: '';
                 display: block;
-                background-color: $white;
+                background-color: $orange;
                 height: 2px;
                 width: 30px;
                 position: absolute;
@@ -567,7 +590,7 @@ h3 {
                     position: relative;
                     right: -15px;
                     top: -15px;
-                    border-right: 2px solid $white;
+                    border-right: 2px solid $orange;
                     height: 100px;
                     display: block;
                     animation: brandNavHighlight .1s ease;
@@ -602,7 +625,7 @@ h3 {
                         position: relative;
                         right: 0px;
                         top: -37.5px;
-                        border-right: 2px solid $white;
+                        border-right: 2px solid $orange;
                         height: 49.75px;
                         display: block;
                         animation: navHighlight .1s ease;
@@ -616,7 +639,7 @@ h3 {
                         position: relative;
                         right: 0px;
                         top: -37.5px;
-                        border-right: 2px solid $white;
+                        border-right: 2px solid $orange;
                         height: 49.75px;
                         display: block;
                         animation: navHighlight .1s ease;
@@ -630,7 +653,7 @@ h3 {
                         position: relative;
                         right: 0px;
                         top: -37.5px;
-                        border-right: 2px solid $white;
+                        border-right: 2px solid $orange;
                         height: 49.75px;
                         display: block;
                         animation: navHighlight .1s ease;
@@ -644,7 +667,7 @@ h3 {
                         position: relative;
                         right: 0px;
                         top: -37.5px;
-                        border-right: 2px solid $white;
+                        border-right: 2px solid $orange;
                         height: 49.75px;
                         display: block;
                         animation: navHighlight .1s ease;
@@ -709,7 +732,7 @@ h3 {
     hr {
         width: 40%;
         animation: introLine 1.8s ease 1;
-        border-color: $black
+        border-color: $black;
     }
 
     .balloon {
@@ -886,6 +909,7 @@ h3 {
     height: auto;
     padding-top: 80px;
     text-align: center;
+    @extend .star-bg;
     .content {
         width: 100%;
     }
@@ -897,7 +921,7 @@ h3 {
         color: $white;
     }
     hr {
-        border-color: $white;
+        border-color: $orange;
     }
 }
 /*
@@ -974,7 +998,7 @@ h3 {
                 justify-content: center;
                 &:after {
                     content: '';
-                    border-top: 1px solid $white;
+                    border-top: 1px solid $orange;
                     width: 2%;
                     margin: 0 auto;
                     transform: translateY(20px);
@@ -1025,6 +1049,7 @@ h3 {
     height: auto;
     background-color: $gray;
     overflow-y: hidden;
+    @extend .star-bg;
     .arrow-right {
         z-index: 8;
         bottom: 5%;
@@ -1033,7 +1058,7 @@ h3 {
         border: none;
         padding: 5px 0 4px 2px;
         &:active {
-            background-color: tint($gray,6%);
+            background-color: tint($orange,15%);
         }
     }
     
@@ -1045,7 +1070,7 @@ h3 {
         border: none;
         padding: 5px 2px 4px 0;  
         &:active {
-            background-color: tint($gray,6%);
+            background-color: tint($orange,15%);
         }
     }
     .bgbox {   
@@ -1359,7 +1384,7 @@ h3 {
     background-image: url("../images/work-bg-dark.jpg");
     background-size: cover;
     background-position: center center;
-    padding: 80px 0;
+    padding: 90px 0;
     height: auto;
     .contact-content {
         padding-top: 50px;
@@ -1429,8 +1454,7 @@ h3 {
 |--------------------------------------------------------------
 */
 footer {
-    background-color: tint($black, 2%);;
-    height: auto;
+    background-color: tint($black, 2%);
     padding: 15px;
     span {
         padding-top: 8px;
@@ -1446,6 +1470,13 @@ footer {
             span {
                 padding-bottom: 15px;
             }
+        }
+    }
+    .button-container {
+        float: right;
+        position: relative;
+        @media(max-width: 767px){
+            float: none;
         }
     }
 }
@@ -1478,9 +1509,11 @@ footer {
             position: relative;
             &:hover {
                 opacity: .8;
+                color: $orange;
             }
             &:active {
                 opacity: 1;
+                color: $orange;
             }
         }
     }
@@ -1524,7 +1557,7 @@ footer {
                     padding-bottom: 40px;
                     &:after {
                         content: '';
-                        border-top: 1px solid $white;
+                        border-top: 1px solid $orange;
                         width: 15%;
                         height: 1px;
                         margin: 0 auto;

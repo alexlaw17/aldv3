@@ -3,6 +3,7 @@
 // generated on 2015-06-15 using generator-gulp-webapp 0.3.0
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var fixmyjs = require("gulp-fixmyjs");
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
@@ -23,6 +24,8 @@ gulp.task('styles', function () {
     .pipe(reload({stream: true}));
 });
 
+
+
 gulp.task('jshint', function () {
   return gulp.src('app/scripts/**/*.js')
     .pipe(reload({stream: true, once: true}))
@@ -42,6 +45,30 @@ gulp.task('html', ['styles'], function () {
     .pipe($.useref())
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('fixmyjs', function() {
+    return gulp.src('app/scripts/**/*.js')
+        .pipe(fixmyjs({
+            "browser": true,
+            "node": true,
+            "esnext": true,
+            "bitwise": true,
+            "camelcase": true,
+            "curly": true,
+            "eqeqeq": true,
+            "immed": true,
+            "indent": 2,
+            "latedef": true,
+            "newcap": true,
+            "noarg": true,
+            "quotmark": "single",
+            "undef": true,
+            "unused": true,
+            "strict": true,
+            "jquery": true
+        }))
+        .pipe(gulp.dest("dist/scripts"));
 });
 
 gulp.task('images', function () {
